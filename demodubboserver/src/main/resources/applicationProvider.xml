@@ -10,12 +10,12 @@
 
 	<!-- 本机 伪集群 测试 -->
 	<dubbo:registry protocol="zookeeper"
-		address="172.16.30.90:2181,172.16.30.90:2182,172.16.30.90:2183" />
+		address="192.168.128.1:2181,192.168.128.1:2182,192.168.128.1:2183" />
 
 	<dubbo:protocol name="dubbo" port="20880" />
 
 	<dubbo:service interface="demo.service.IDemoService" ref="demoService" />
 
 	<p:bean id="demoService" class="demo.service.impl.DemoServiceImpl" />
-	
+
 </p:beans>

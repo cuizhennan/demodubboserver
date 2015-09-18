@@ -1,5 +1,7 @@
 package demo.service.impl;
 
+import java.util.Calendar;
+
 import demo.service.IDemoService;
 
 /**
@@ -7,4 +9,11 @@ import demo.service.IDemoService;
  */
 public class DemoServiceImpl implements IDemoService {
 
+    @Override
+    public String sayHello(String args) {
+        args = "Hello " + args + " 2:" + Calendar.getInstance().getTime();
+        System.out.println(args);
+
+        return args;
+    }
 }
