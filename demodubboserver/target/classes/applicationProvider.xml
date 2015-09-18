@@ -8,9 +8,9 @@
 
 	<dubbo:application name="demodubboserver" />
 
-	<!-- 本机 伪集群 测试 -->
+	<!-- 本机 伪集群 测试 ,192.168.128.1:2183-->
 	<dubbo:registry protocol="zookeeper"
-		address="192.168.128.1:2181,192.168.128.1:2182,192.168.128.1:2183" />
+		address="192.168.128.1:3181,192.168.128.1:3182" />
 
 	<dubbo:protocol name="dubbo" port="20880" />
 
