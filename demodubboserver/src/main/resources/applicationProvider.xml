@@ -8,12 +8,12 @@
 
 	<dubbo:application name="demodubboserver" />
 
-	<!-- 本机 伪集群 测试 ,192.168.128.1:2183-->
-	<dubbo:registry protocol="zookeeper"
-		address="192.168.128.1:3181,192.168.128.1:3182" />
+	<!-- 注册中心:zookeeper -->
+	<dubbo:registry protocol="zookeeper" address="192.168.0.17:2181" />
 
 	<dubbo:protocol name="dubbo" port="20880" />
 
+	<!-- 服务暴露的接口 -->
 	<dubbo:service interface="demo.service.IDemoService" ref="demoService" />
 
 	<p:bean id="demoService" class="demo.service.impl.DemoServiceImpl" />
